@@ -43,7 +43,6 @@ Below is a diagram that illustrates the structure and flow of the system:
 
 The key components of the architecture include:
 
-- **Thread Pool**: A pool of worker threads that execute tasks in parallel.
 - **Task Scheduler**: Manages the scheduling of tasks and ensures that all threads are efficiently utilized.
 - **IPC Mechanism**: Implements communication channels between processes, allowing for coordination and data sharing.
 - **Synchronization**: Mutex locks and semaphores are used to avoid race conditions and ensure smooth operation when accessing shared resources.
@@ -51,22 +50,43 @@ The key components of the architecture include:
 ## Directory Structure
 
 ```
-Exercise3/
+# Multi-Threaded-News-App/
 │
-├── src/                    # Source files for the project
-│   ├── main.c              # Main entry point for the simulation
-│   ├── thread_pool.c       # Thread pool implementation
-│   ├── scheduler.c         # Task scheduler implementation
-│   └── ipc.c               # Inter-process communication logic
+├── bounded_buffer/                # Bounded buffer implementation
+│   ├── bounded_buffer.c           # Implementation of bounded buffer operations
+│   ├── bounded_buffer.h           # Header file for bounded buffer
 │
-├── include/                # Header files for function declarations
-│   ├── thread_pool.h       
-│   ├── scheduler.h
-│   └── ipc.h
+├── data_handler/                  # Data handling module
+│   ├── data_handler.c             # Implementation of data processing functions
+│   ├── data_handler.h             # Header file for data handler
 │
-├── Makefile                # Build script for compiling the project
+├── dispatcher/                    # Dispatcher module
+│   ├── dispatcher.c               # Implementation of dispatcher logic
+│   ├── dispatcher.h               # Header file for dispatcher
 │
-└── README.md               # Project documentation
+├── news_runner/                   # News runner module
+│   ├── news_runner.c              # Implementation of news runner functionality
+│   ├── news_runner.h              # Header file for news runner
+│
+├── producer/                      # Producer module
+│   ├── producer.c                 # Implementation of producer logic
+│   ├── producer.h                 # Header file for producer
+│
+├── queue/                         # Queue data structure
+│   ├── queue.c                    # Implementation of queue operations
+│   ├── queue.h                    # Header file for queue
+│
+├── screen_manager/                # Screen management module
+│   ├── screen_manager.c           # Implementation of screen management functions
+│   ├── screen_manager.h           # Header file for screen manager
+│
+├── Makefile                       # Build script for compiling the project
+│
+├── main.c                         # Main entry point for the application
+│
+├── config.txt                     # Configuration file for the application
+│
+└── README.md                      # Project documentation
 ```
 
 ## Setup and Usage
