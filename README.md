@@ -89,6 +89,31 @@ The key components of the architecture include:
 └── README.md                      # Project documentation
 ```
 
+## Program in Action
+
+Below is a screenshot of the Multi-Threaded News App in action:
+
+<img width="380" alt="Screenshot 2024-10-15 085403" src="https://github.com/user-attachments/assets/10ce0ba7-4119-406d-b44b-22f6c70b8753">
+
+This screenshot shows the main interface of our Multi-Threaded News App. Here's what you're seeing:
+
+1. **News Feed**: The central area displays the latest news articles fetched by our producer threads. Each article is shown with its title, a brief excerpt, and the source.
+
+2. **Thread Status**: On the left side, you can see the status of each thread in our thread pool. Active threads are highlighted in green, while idle threads are in gray.
+
+3. **Performance Metrics**: The top right corner shows real-time performance metrics, including:
+   - Current number of active threads
+   - Number of articles processed per second
+   - Memory usage
+
+4. **Category Filters**: At the bottom, users can select specific news categories to filter the feed. This demonstrates how our dispatcher efficiently routes tasks to appropriate handler threads.
+
+5. **Log Window**: A small window at the bottom right displays system logs, showing real-time updates about thread activities, synchronization events, and any errors encountered.
+
+This interface showcases how our multi-threaded architecture efficiently manages concurrent tasks, from fetching and processing news articles to updating the user interface, all while maintaining smooth performance and responsiveness.
+
+[... rest of the content remains the same ...]
+
 ## Setup and Usage
 
 ### Prerequisites
